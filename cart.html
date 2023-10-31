@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Giỏ Hàng</title>
+        <link rel="stylesheet" type="text/css" href="css/cart.css">
+        <!-- Kết nối tệp cart.css -->
+    </head>
+    <body>
+        <div class="section">
+            <h2>Chọn sản phẩm</h2>
+            <ul>
+                <li>Thơm - Giá: $15 <button onclick="addToCart('Thơm')">Thêm vào
+                        giỏ</button></li>
+                <li>Xoài - Giá: $20 <button onclick="addToCart('Xoài')">Thêm vào
+                        giỏ</button></li>
+                <li>Mận - Giá: $10 <button onclick="addToCart('Mận')">Thêm vào
+                        giỏ</button></li>
+                <li>Cam - Giá: $5 <button onclick="addToCart('Cam')">Thêm vào
+                        giỏ</button></li>
+                <li>Quýt - Giá: $5 <button onclick="addToCart('Quýt')">Thêm vào
+                        giỏ</button></li>
+                <li>Táo - Giá: $25 <button onclick="addToCart('Táo')">Thêm vào
+                        giỏ</button></li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Giỏ hàng</h2>
+            <div id="cart-items">
+                <ul></ul>
+            </div>
+            <div>
+                <button onclick="placeOrder()">Đặt hàng</button>
+            </div>
+        </div>
+        <div class="section" id="orderSummary" style="display: none;">
+            <h3>Thông tin đặt hàng:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Giá</th>
+                    </tr>
+                </thead>
+                <tbody id="orderDetails"></tbody>
+            </table>
+            <p id="totalPrice">Tổng giá tiền: $0</p>
+        </div>
+        <script src="cart.js"></script>
+
+    </body>
+</html>
